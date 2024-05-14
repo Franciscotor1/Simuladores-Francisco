@@ -1,0 +1,161 @@
+body {
+    background-color: black; /* Fondo negro */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    height: 100vh; /* Establece la altura del body al 100% del viewport */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+.card-container {
+    display: flex; /* Usa flexbox para alinear la tarjeta */
+    justify-content: center; /* Centra horizontalmente la tarjeta */
+    align-items: center; /* Centra verticalmente la tarjeta */
+    height: 100%; /* Establece la altura de la tarjeta-container al 100% */
+}
+
+.card {
+    text-align: center; /* Centra el contenido de la tarjeta */
+    padding: 20px; /* Agrega espacio interno a la tarjeta */
+    background-color: greenyellow; /* Fondo rojo */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.5); /* Sombra */
+    transition: background-color 0.3s ease; /* Transición de color al pasar el cursor */
+}
+
+.card:hover {
+    background-color: #ff00ff; /* Cambio de color al pasar el cursor */
+}
+
+.slots {
+    position: relative;
+    width: 250px; /* Ancho ajustado para caber en la tarjeta */
+    height: 270px; /* Alto ajustado para caber en la tarjeta */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, grey 0%, lightgray 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.6); /* Cambiado a blanco sólido */
+    border-right: 1px solid rgba(255, 255, 255, 0.6); /* Cambiado a blanco sólido */
+    border-left: 1px solid rgba(0, 0, 0, 0.4); /* Cambiado a negro sólido */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4); /* Cambiado a negro sólido */
+    box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    margin: auto; /* Centra horizontal y verticalmente */
+    margin-bottom: 20px; /* Agregado margen inferior */
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 10px;
+        height: 2px;
+        background-color: rgba(0, 0, 0, 0.5); /* Cambiado a negro sólido */
+    }
+
+    &::before {
+        left: 0;
+        transform: translate(-200%, -50%);
+    }
+
+    &::after {
+        right: 0;
+        transform: translate(200%, -50%);
+    }
+}
+
+
+.reel {
+    margin: 0 auto; /* Centra horizontalmente el elemento */
+    width: 79px; /* Ancho de cada slot */
+    height: 79px; /* Alto de cada slot */
+    border: 1px solid rgba(0, 0, 0, 0.3); /* Borde negro */
+    border-radius: 3px;
+    overflow: hidden;
+    background-image: url(https://assets.codepen.io/439000/slotreel.webp);
+    background-position: 0 0;
+    background-repeat: repeat-y;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.4) 100%); /* Gradiente de fondo */
+        box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, 0.3); /* Sombra */
+    }
+}
+
+.debug {
+    position: fixed;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.3); /* Borde negro */
+    font-family: monospace;
+    font-size: 1.6rem;
+}
+
+
+.options {
+    display: flex; /* Usa flexbox para alinear los botones */
+    justify-content: center; /* Centra horizontalmente los botones */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.options button {
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 10px 20px; /* Espacio alrededor del botón */
+    cursor: pointer;
+    background-color: #007bff; /* Azul */
+    color: #fff; /* Blanco */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.options button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+button.jugar, button.reset {
+    font-size: 24px; /* Tamaño de fuente más grande */
+    padding: 15px 30px; /* Espacio alrededor del botón */
+    cursor: pointer;
+    background-color: #007bff; /* Azul */
+    color: #fff; /* Blanco */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Agregado margen superior */
+}
+
+button.jugar:hover, button.reset:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+button.reset {
+    margin-left: 20px; /* Espacio entre los botones */
+}
+
+button.regresar {
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 20px; /* Espacio entre los botones */
+}
+
+button.regresar:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}

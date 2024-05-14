@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino de Francisco</title>
+    <meta name="description" content="Simulador Bar de Francisco Torres">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card" id="game-card">
+            <h1>Bienvenido al Casino de Francisco</h1>
+            <h3>Elige 3 veces y dale Jugar!</h3>
+            <div class="slots">
+                <div class="reel"></div>
+                <div class="reel"></div>
+                <div class="reel"></div>
+            </div>
+
+            <div id="debug" class="debug"></div>
+
+            <div class="options">
+                <button onclick="chooseSymbol('banana')">Banana</button>
+                <button onclick="chooseSymbol('seven')">Siete</button>
+                <button onclick="chooseSymbol('cherry')">Cereza</button>
+                <button onclick="chooseSymbol('plum')">Ciruela</button>
+                <button onclick="chooseSymbol('orange')">Naranja</button>
+                <button onclick="chooseSymbol('bell')">Campana</button>
+                <button onclick="chooseSymbol('bar')">Bar</button>
+                <button onclick="chooseSymbol('lemon')">Limón</button>
+                <button onclick="chooseSymbol('melon')">Melón</button>
+            </div>
+
+            <button onclick="startGame()" class="jugar">Jugar</button> <!-- Botón para jugar -->
+            <button onclick="resetGame()" class="reset">Reiniciar Juego</button> <!-- Botón para reiniciar el juego -->
+            <button onclick="location.href='../index.html'" class="button regresar">Regresar al Index</button>
+           
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

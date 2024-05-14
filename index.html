@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICAS</title>
+    <!-- Enlace a tu archivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilo para el texto en color azul */
+        .texto, .titulo {
+            color: blue;
+        }
+
+        /* Alineación del contenido al centro */
+        #contenedor {
+            text-align: center;
+        }
+
+        /* Estilos de la tarjeta */
+        .tarjeta {
+            background-color: #8B0000; /* Rojo oscuro */
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            transition: background-color 0.3s ease; /* Transición para el efecto */
+            max-width: 600px; /* Ancho máximo de la tarjeta */
+            position: relative; /* Agregado para alinear la imagen */
+        }
+
+        .tarjeta:hover {
+            background-color: #CD5C5C; /* Rojo más claro al pasar el ratón */
+        }
+
+        /* Estilos de las letras con efectos */
+        .encabezado h1, .encabezado h2, .encabezado h3 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
+        }
+
+        /* Estilos de los botones */
+        .boton {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4682B4; /* Azul acero */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background-color 0.3s ease; /* Transición para el efecto */
+        }
+
+        .boton:hover {
+            background-color: #4169E1; /* Azul real */
+        }
+
+        /* Estilos de la imagen */
+        .tarjeta img {
+            border-radius: 50%; /* Hacer la imagen un círculo */
+            margin-bottom: 20px; /* Separación entre la imagen y los botones */
+        }
+
+        /* Estilos de los enlaces */
+        .tarjeta a {
+            display: block; /* Hacer que los enlaces sean bloques */
+            margin-bottom: 10px; /* Separación entre los enlaces */
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <!-- Tarjeta con contenido -->
+        <div class="tarjeta">
+            <div class="encabezado">
+                <!-- Agregar color azul al texto -->
+                <h1 class="titulo">Simuladores</h1>
+                <h2 class="subtitulo">FRANCISCO JAVIER TORRES ACOSTA</h2>
+                <!-- Agregar color azul al texto -->
+                <h3 class="texto">INGENIERIA DE SOFTWARE</h3>
+                <h3 class="texto">Simulación</h3> 
+                <h3 class="texto">Matricula: 22050586</h3>
+                <h3 class="texto">Practica: Venta de Autos Automata</h3>
+                <!-- Agregar enlaces a Netlify y GitHub -->
+                <a href="https://franciscotorres-uadeo-ventadeautos1.netlify.app/" target="_blank" class="boton">Netlify</a>
+                <a href="https://github.com/Franciscotor1/Uadeo-website-Ventadeauto" target="_blank" class="boton">GitHub</a>
+                <img src="img/CINTER01.jpg" width="200" height="200" alt="Imagen de muestra"> 
+            </div>
+            <!-- Botones para entrar a las páginas de prácticas -->
+            <div style="margin-top: 20px;">
+                <a href="html/carritos.html" style="text-decoration: none;">
+                    <button class="boton">Carritos Game Francisco</button>
+                </a>
+            </div>
+            <div style="margin-top: 20px;">
+                <a href="html/casino.html" style="text-decoration: none;">
+                    <button class="boton">Casino de Francisco</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

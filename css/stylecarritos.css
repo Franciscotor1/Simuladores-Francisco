@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #4682B4);
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    width: 80%;
+}
+
+.track {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background: #444;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.car {
+    position: absolute;
+    bottom: 10px;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.car-body {
+    width: 100%;
+    height: 20px;
+    border-radius: 5px 5px 0 0;
+}
+
+.car-wheel {
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.front-wheel {
+    bottom: -5px;
+    left: 5px;
+}
+
+.back-wheel {
+    bottom: -5px;
+    right: 5px;
+}
+
+#car1 .car-body {
+    background: blue;
+}
+
+#car2 .car-body {
+    background: red;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+}
+
+#startButton {
+    background: #28a745;
+    color: #fff;
+}
+
+#startButton:hover {
+    background: #218838;
+}
+
+#chooseBlueButton, #chooseRedButton {
+    background: #007bff;
+    color: #fff;
+}
+
+#chooseBlueButton:hover, #chooseRedButton:hover {
+    background: #0056b3;
+}
+
+#backButton {
+    background: #dc3545;
+    color: #fff;
+}
+
+#backButton:hover {
+    background: #c82333;
+}
